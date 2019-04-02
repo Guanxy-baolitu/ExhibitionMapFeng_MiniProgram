@@ -1,7 +1,22 @@
 /**app.wxss**/
-.container {
+page {
+  background: #f6f6f6;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   box-sizing: border-box;
-} 
+}
+.container
+{
+  width: 96vw;
+}
+input
+{
+  margin-top: 16rpx;
+  background-color: #fff;
+  border-radius: 1vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-left: 2vh;
+}

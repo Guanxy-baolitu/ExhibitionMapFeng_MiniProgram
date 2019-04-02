@@ -1,0 +1,119 @@
+/** 搜索框下面的提示区域 */
+.wxSearchInner{
+  background-color: #fff;
+  align-content: center;
+  padding: 8rpx;
+}
+
+/** 搜索热点标题 */
+.wxSearchTitle{
+  display: block;
+  padding: 10rpx 5rpx 5rpx 10rpx;
+  text-align: left;
+}
+
+/** 提示样式 */
+.wxSearchMindKeyItem{
+  margin-left: 10rpx;
+  border-bottom: 1rpx solid #eee;
+  display: flex;
+  font-size: 28rpx;
+}
+
+/** 标签样式 */
+.wxSearchKeyList{
+  margin-top: 18rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 1rpx solid #eee;
+}
+
+/** 标签样式 */
+.wxSearchKeyItem{
+  margin: 16rpx;
+  padding: 12rpx 28rpx 12rpx 28rpx;
+  border: 1.5rpx solid #eee;
+  border-radius: 4rpx;
+}
+
+.weui-search-bar {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #efeff4;
+  border-top: 1rpx solid #d7d6dc;
+  border-bottom: 1rpx solid #d7d6dc;
+}
+
+.weui-icon-search {
+  margin-right: 8rpx;
+  font-size: inherit;
+}
+
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 30rpx;
+  top: 20rpx;
+}
+
+.weui-search-bar__text {
+  display: inline-block;
+  font-size: 26rpx;
+  vertical-align: middle;
+}
+
+.weui-search-bar__form {
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+  border-radius: 5rpx;
+  background: #fff;
+  border: 1rpx solid #e6e6ea;
+}
+
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 60rpx;
+  padding-right: 100rpx;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.weui-icon-clear {
+  position: absolute;
+  top: 3rpx;
+  right: 20rpx;
+  padding:8rpx 8rpx;
+}
+
+.weui-icon-clear-history {
+  position: absolute;
+  top: 108rpx;
+  right: 20rpx;
+  padding:8rpx 8rpx;
+}
+
+.weui-search-bar__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 3rpx;
+  text-align: center;
+  color: #9b9b9b;
+  background: #fff;
+}
+/* .weui-search-bar__cancel-btn {
+  position: absolute;
+  top: 18rpx;
+  right: 16rpx;
+  color: #009688;
+  white-space: nowrap;
+  z-index: 0;
+} */
+

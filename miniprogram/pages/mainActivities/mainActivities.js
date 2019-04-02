@@ -3,11 +3,33 @@ const app = getApp()
 
 Page({
   data: {
-    avatarUrl: './user-unlogin.png',
-    userInfo: {},
-    logged: false,
-    takeSession: false,
-    requestResult: ''
+    activityList:[
+      {
+        name: "活动一",
+        startTime: (new Date()).toString(),
+        endTime: (new Date()).toString(),
+        location: "体育场C座"
+      },
+      {
+        name: "活动二",
+        startTime: (new Date()).toString(),
+        endTime: (new Date()).toString(),
+        location: "体育场C座"
+      },
+      {
+        name: "活动三",
+        startTime: (new Date()).toString(),
+        endTime: (new Date()).toString(),
+        location: "体育场C座"
+      },
+      {
+        name: "活动四",
+        startTime: (new Date()).toString(),
+        endTime: (new Date()).toString(),
+        location: "体育场C座"
+      }
+
+    ]
   },
 
   onLoad: function() {

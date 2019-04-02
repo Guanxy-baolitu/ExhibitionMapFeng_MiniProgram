@@ -1,0 +1,44 @@
+/**index.wxss**/
+.list-container
+{
+  width: 96vw;
+  margin-top: 16rpx;
+}
+
+.list-item
+{
+  background: white;
+  border-radius: 0.8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 300rpx;
+  margin-top: 12rpx;
+}
+
+.list-item-image
+{
+  height: 280rpx;
+  width: 250rpx;
+  margin-left: 40rpx;
+}
+
+.list-item-detail
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 35rpx;
+}
+
+.list-item-detail-title
+{
+  color: black;
+  font-style: bold;
+}
+
+.list-item-detail-button
+{
+  margin-top: 100rpx;
+}
+@import "../../wxSearchView/wxSearchView.wxss";

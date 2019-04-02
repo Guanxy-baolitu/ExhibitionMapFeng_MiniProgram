@@ -1,0 +1,25 @@
+/**index.wxss**/
+@import "../../wxSearchView/wxSearchView.wxss";
+.button-container
+{
+  margin-top: 36rpx;
+  display: flex;
+  flex-direction: row;
+}
+#quick
+{
+  padding-top: 220rpx;
+  color: darkcyan
+}
+.btn-item
+{
+  margin-right: 16rpx;
+}
+.recordBtn
+{
+  background-color: #009688;
+  color: white;
+  position: fixed;
+  width: 96vw;
+  bottom: 16rpx; 
+}
