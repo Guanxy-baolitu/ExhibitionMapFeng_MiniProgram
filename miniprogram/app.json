@@ -3,6 +3,7 @@
     "pages/mainMap/mainMap",
     "pages/joinIn/joinIn",
     "pages/search/search",
+    "pages/D3web-view/d3web-view",
     "pages/mainActivities/mainActivities"
   ],
   "window": {

@@ -8,6 +8,21 @@
       </view>
     </view>
   </view>
-
   <view>{{ searchValue}}</view>
 </view>
+<map
+  id="map"
+  longitude="{{markers[0].longitude}}"
+  latitude="{{markers[0].latitude}}"
+  scale="19"
+  controls="{{controls}}"
+  bindcontroltap="controltap"
+  markers="{{markers}}"
+  bindmarkertap="markertap"
+  polyline="{{polyline}}"
+  bindregionchange="regionchange"
+  show-location = "true"
+  enable-rotate = "true"
+  show-compass = "true"
+  style="width: 100%; height: 100vh;"
+></map>
