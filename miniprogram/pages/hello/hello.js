@@ -93,5 +93,24 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+
+    click: function (e) {
+        // wx.openLocation({
+        //     latitude: 39.758810,
+        //     longitude: 116.356720,
+        //     scale: 18,
+        //     name: '北京大学软件与微电子学院',
+        //     address:'北京市大兴区金苑路24号'
+        // }),
+
+        wx.openLocation({
+            latitude: 39.979384,
+            longitude: 116.310319,
+            scale: 16, // 缩放级别
+            name: "微软亚洲研究院",
+            address: "中国北京市海淀区中关村丹棱街5号"
+        })
+
     }
 })
