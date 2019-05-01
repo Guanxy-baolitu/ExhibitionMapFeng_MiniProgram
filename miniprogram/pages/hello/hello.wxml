@@ -1,0 +1,16 @@
+<map
+        bindcontroltap="controltap"
+        bindmarkertap="markertap"
+        bindregionchange="regionchange"
+        controls="{{controls}}"
+        enable-rotate="true"
+        id="map"
+        latitude="{{markers[0].latitude}}"
+        longitude="{{markers[0].longitude}}"
+        markers="{{markers}}"
+        polyline="{{polyline}}"
+        scale="19"
+        show-compass="true"
+        show-location="true"
+        style="width: 100%; height: 100vh;"
+></map>

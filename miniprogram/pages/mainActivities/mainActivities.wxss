@@ -1,44 +1,47 @@
 /**index.wxss**/
-.list-container
-{
-  width: 96vw;
-  margin-top: 16rpx;
+.list-container {
+    width: 96vw;
+    margin-top: 16 rpx;
 }
 
-.list-item
-{
-  background: white;
-  border-radius: 0.8vh;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 300rpx;
-  margin-top: 12rpx;
+.list-item {
+    background: white;
+    border-radius: 0.8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 300 rpx;
+    margin-top: 12 rpx;
 }
 
-.list-item-image
-{
-  height: 280rpx;
-  width: 250rpx;
-  margin-left: 40rpx;
+.list-item-image {
+    height: 280 rpx;
+    width: 250 rpx;
+    margin-left: 40 rpx;
 }
 
-.list-item-detail
-{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 35rpx;
+.list-item-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 35 rpx;
 }
 
-.list-item-detail-title
-{
-  color: black;
-  font-style: bold;
+.list-item-detail-title {
+    color: black;
+    font-style: bold;
 }
 
-.list-item-detail-button
-{
-  margin-top: 100rpx;
+.list-item-detail-button {
+    margin-top: 100 rpx;
 }
+
+
+.activity_button {
+    flex-direction: row;
+    display: flex;
+    color: red;
+
+}
+
 @import "../../wxSearchView/wxSearchView.wxss";
