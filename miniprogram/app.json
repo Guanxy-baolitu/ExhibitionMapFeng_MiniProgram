@@ -1,35 +1,37 @@
 {
-  "pages": [
-    "pages/mainMap/mainMap",
-    "pages/joinIn/joinIn",
-    "pages/search/search",
-    "pages/D3web-view/d3web-view",
-    "pages/mainActivities/mainActivities"
-  ],
-  "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#009688",
-    "navigationBarTitleText": "看展小枫",
-    "navigationBarTextStyle": "white"
-  },
-  "tabBar": {
-    "list": [
-      {
-        "text": "地图",
-        "iconPath": "images/地图.png",
-        "selectedIconPath": "images/地图 (1).png",
-        "pagePath": "pages/mainMap/mainMap"
-      },
-      {
-        "text": "活动列表",
-        "iconPath": "images/活动.png",
-        "selectedIconPath": "images/活动 (1).png",
-        "pagePath": "pages/mainActivities/mainActivities"
-      }
+    "pages": [
+        "pages/mainMap/mainMap",
+        "pages/joinIn/joinIn",
+        "pages/search/search",
+        "pages/D3web-view/d3web-view",
+        "pages/mainActivities/mainActivities",
+        "pages/hello/hello"
     ],
-    "backgroundColor": "#FFFFFF",
-    "color": "#707070",
-    "selectedColor": "#009688"
-  }
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#009688",
+        "navigationBarTitleText": "看展小枫",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "text": "地图",
+                "iconPath": "images/地图.png",
+                "selectedIconPath": "images/地图 (1).png",
+                "pagePath": "pages/mainMap/mainMap"
+            },
+            {
+                "text": "活动列表",
+                "iconPath": "images/活动.png",
+                "selectedIconPath": "images/活动 (1).png",
+                "pagePath": "pages/mainActivities/mainActivities"
+            }
+        ],
+        "backgroundColor": "#FFFFFF",
+        "color": "#707070",
+        "selectedColor": "#009688"
+    },
+    "sitemapLocation": "sitemap.json"
 }
