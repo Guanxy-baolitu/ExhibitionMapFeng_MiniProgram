@@ -1,5 +1,5 @@
 <!--knowledgeHall.wxml-->
 <view class="container">
 <include src="../../wxSearchView/wxSearchView.wxml" />
-    <button class="recordBtn">长按说话</button>
+    <button class="recordBtn" bindtap='myRecordSpeechFunction'>长按说话</button>
 </view>

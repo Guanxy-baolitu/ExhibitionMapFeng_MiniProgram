@@ -19,6 +19,7 @@
   bindcontroltap="controltap"
   markers="{{markers}}"
   bindmarkertap="markertap"
+  circle="{{circles}}"
   polyline="{{polyline}}"
   bindregionchange="regionchange"
   show-location = "true"

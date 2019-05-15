@@ -1,3 +1,5 @@
+var ReadJsonJS = require("../../js/readFromJSON.js");
+const app = getApp();
 Page({
   data: {
     searchValue: '',
@@ -11,26 +13,9 @@ Page({
       hotKeys: [], //自定义热门搜索
       his: [] //历史搜索关键字
     },
-    markers: [{
-      iconPath: '../../images/map-marker-alt.png',
-      id: 0,
-      latitude: 39.75861437,
-      longitude: 116.3558386,
-      width: 50,
-      height: 50
-    }],
-    polyline: [{
-      points: [{
-        longitude: 116.356666,
-        latitude: 39.7592
-      }, {
-          longitude: 116.3558386,
-        latitude: 39.75861437
-      }],
-      color: '#FFFFFF',
-      width: 2,
-      dottedLine: true
-    }],
+    markers: [],
+    circles : [],
+    polyline: [],
     controls: [{
       id: 1,
       iconPath: '../../images/地图 (1).png',
@@ -46,6 +31,12 @@ Page({
 
   // 搜索页面跳回
   onLoad: function (options) {
+    var geoPage = ReadJsonJS.ReadJsonToGeoPage();
+    console.log(app.globalData.floors[app.globalData.currentFloor].KeyPoints)
+    this.setData(
+      {
+        circles: app.globalData.floors[app.globalData.currentFloor].KeyPoints
+      });
     if (options && options.searchValue) {
       this.setData({
         searchValue: "搜索：" + options.searchValue
