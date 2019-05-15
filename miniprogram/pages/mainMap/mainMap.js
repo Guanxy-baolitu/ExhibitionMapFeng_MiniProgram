@@ -13,9 +13,16 @@ Page({
       hotKeys: [], //自定义热门搜索
       his: [] //历史搜索关键字
     },
-    markers: [],
-    circles : [],
+    markers: [{
+      iconPath: '../../images/map-marker-alt.png',
+      latitude: 39.75861437,
+      longitude: 116.3558386,
+      width: 50,
+      height: 50
+    }],
+    circles: [],
     polyline: [],
+    polygons: [],
     controls: [{
       id: 1,
       iconPath: '../../images/地图 (1).png',
@@ -32,10 +39,10 @@ Page({
   // 搜索页面跳回
   onLoad: function (options) {
     var geoPage = ReadJsonJS.ReadJsonToGeoPage();
-    console.log(app.globalData.floors[app.globalData.currentFloor].KeyPoints)
     this.setData(
       {
-        circles: app.globalData.floors[app.globalData.currentFloor].KeyPoints
+        circles: app.globalData.floors[app.globalData.currentFloor].KeyPoints,
+        polygons: app.globalData.floors[app.globalData.currentFloor].Polygons
       });
     if (options && options.searchValue) {
       this.setData({

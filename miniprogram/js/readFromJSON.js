@@ -31,13 +31,21 @@ function ReadJsonToGeoPage() {
             strokeWidth:4
           });
         }
-        // else if (feature.geometry.type == "Polygon") {
-        //   var newPolygon = new Polygon(currentColor);
-        //   GeojsonPages[currentPageName].floors[currentFloor].MapCovers.push(newPolygon);
-        //   feature.geometry.coordinates.forEach(function (geopnt) {
-        //     doAddPolygonNewPos(geopnt[1], geopnt[0], newPolygon);
-        //   });
-        // }
+        else if (feature.geometry.type == "Polygon") {
+          var points = [];
+          feature.geometry.coordinates.forEach(function (geopnt) {
+            points.push({
+              longitude: geopnt[0],
+              latitude: geopnt[1]
+            });
+          });
+          app.globalData.floors[currentFloor].Polygons.push({
+            points: points,
+            strokeWidth: 4,
+            fillColor: currentColor
+          });
+          console.log(app.globalData.floors[currentFloor].Polygons);
+        }
       });
   }
   app.globalData.currentFloor = 1;
