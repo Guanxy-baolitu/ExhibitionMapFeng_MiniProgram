@@ -1,36 +1,3 @@
 /**index.wxss**/
-@import "../../style/activityList.wxss";
+@import "../../views/activityListView/activityListView.wxss";
 @import "../../views/wxSearchView/wxSearchView.wxss";
-.index_bt1{
-  width: 100rpx;
-  height: 100rpx;
-  padding-top:30rpx;
-  margin-left: 600rpx;
-}
- 
-.xiaoer{
-  width: 100rpx;
-  height: 100rpx;
-}
- 
-.index_shuaxin{
-  width: 60rpx;
-  height: 60rpx;
-  padding-top: 860rpx;
-  margin-left: 20rpx;
-}
- 
-.shuaxin{
-  width: 60rpx;
-  height: 60rpx;
-}
- 
-.sch{
-  display: block;
-	z-index: 999999;
-  height: 69rpx;
-  width:100%; 
-  margin:0 auto;
-  padding-top: 30rpx;
-}
- 

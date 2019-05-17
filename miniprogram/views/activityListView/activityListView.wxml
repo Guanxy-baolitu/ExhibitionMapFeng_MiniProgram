@@ -1,0 +1,11 @@
+<view class="list-container">
+    <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <view class="list-item" wx:for="{{activityList}}">
+        <view class="list-item-detail">
+          <text class='list-item-detail-title'>{{item.name}}</text>
+          <text class='list-item-detail-title'>{{item.time}}</text>
+          <text class='list-item-detail-title'>{{item.location}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
