@@ -1,31 +1,11 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="weui-search-bar">
-    <view class="weui-search-bar__form">
-      <view class="weui-search-bar__box">
-        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-        <input type="text" class="weui-search-bar__input" disabled='true' placeholder="想要去哪？" bindtap="wxSearchTab" />
-      </view>
-    </view>
+<include src="../../views/sideSliderView/sideSliderView.wxml" />
+<view bindtouchmove="tap_drag" class="page-top {{open ? ['c-state','cover'] : ''}} ">
+<cover-view class="black_cover_screen" bindtap="black_cover_tap" wx:if="{{open}}"></cover-view>
+  <view bindtap="wxSearchTab">
+    <include src="../../views/searchBarView/searchBarView.wxml" />
+    <view>{{ searchValue}}</view>
   </view>
-  <view>{{ searchValue}}</view>
-</view>
-  <map
-  id="map"
-  longitude="{{markers[0].longitude}}"
-  latitude="{{markers[0].latitude}}"
-  scale="19"
-  controls="{{controls}}"
-  bindcontroltap="controltap"
-  markers="{{markers}}"
-  bindmarkertap="showModal"
-  circles="{{circles}}"
-  polyline="{{polyline}}"
-  polygons="{{polygons}}"
-  enable-rotate = "true"
-  show-location
-  style="width: 100%; height: 55vh"
-  show-compass
-></map>
   
-<include src="../../views/activityListView/activityListView.wxml" />
+  <include src="../../views/qqMapView/qqMapView.wxml" />
+  <include src="../../views/activityListView/activityListView.wxml" />
+</view>

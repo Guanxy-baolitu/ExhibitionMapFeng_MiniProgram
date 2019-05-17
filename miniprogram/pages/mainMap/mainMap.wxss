@@ -1,3 +1,5 @@
 /**index.wxss**/
+@import "../../views/searchBarView/searchBarView.wxss";
 @import "../../views/activityListView/activityListView.wxss";
+@import "../../views/sideSliderView/sideSliderView.wxss";
 @import "../../views/wxSearchView/wxSearchView.wxss";

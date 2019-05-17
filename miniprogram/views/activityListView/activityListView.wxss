@@ -1,6 +1,5 @@
 .list-container
 {
-  width: 96vw;
   top: 60vh;
 }
 scroll-view

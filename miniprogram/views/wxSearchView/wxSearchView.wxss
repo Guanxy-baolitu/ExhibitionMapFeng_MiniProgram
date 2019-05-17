@@ -1,3 +1,4 @@
+@import "../../views/searchBarView/searchBarView.wxss";
 /** 搜索框下面的提示区域 */
 .wxSearchInner{
   background-color: #fff;
@@ -37,57 +38,9 @@
   border-radius: 4rpx;
 }
 
-.weui-search-bar {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  box-sizing: border-box;
-  background-color: #efeff4;
-  border-top: 1rpx solid #d7d6dc;
-  border-bottom: 1rpx solid #d7d6dc;
-}
 
-.weui-icon-search {
-  margin-right: 8rpx;
-  font-size: inherit;
-}
 
-.weui-icon-search_in-box {
-  position: absolute;
-  left: 30rpx;
-  top: 20rpx;
-}
 
-.weui-search-bar__text {
-  display: inline-block;
-  font-size: 26rpx;
-  vertical-align: middle;
-}
-
-.weui-search-bar__form {
-  -webkit-box-flex: 1;
-  -webkit-flex: auto;
-  flex: auto;
-  border-radius: 5rpx;
-  background: #fff;
-  border: 1rpx solid #e6e6ea;
-}
-
-.weui-search-bar__box {
-  position: relative;
-  padding-left: 60rpx;
-  padding-right: 100rpx;
-  box-sizing: border-box;
-  z-index: 1;
-}
-
-.weui-icon-clear {
-  position: absolute;
-  top: 3rpx;
-  right: 20rpx;
-  padding:8rpx 8rpx;
-}
 
 .weui-icon-clear-history {
   position: absolute;

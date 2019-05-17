@@ -26,6 +26,9 @@ var mockList = [
 function init(that)
 {
   __that = that;
+  __that.setData({
+    activityList: []
+  })
   requestActivityList();
   console.log(that.data);
 }
