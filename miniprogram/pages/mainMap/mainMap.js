@@ -1,19 +1,8 @@
 var ReadJsonJS = require("../../js/readFromJSON.js");
-var timeJS = require("../../js/util_time.js");
+var ActListViewJS = require("../../views/activityListView/activityListView.js")
 const app = getApp();
 Page({
   data: {
-    searchValue: '',
-    wxSearchData: {
-      configconfig: {
-        style: "wxSearchNormal"
-      },
-      view: {
-        hidden: true
-      },
-      hotKeys: [], //自定义热门搜索
-      his: [] //历史搜索关键字
-    },
     markers: [{
       iconPath: '../../images/DetailPage.png',
       latitude: 39.75861437,
@@ -35,29 +24,7 @@ Page({
       },
       clickable: true
     }],
-    activityList: [
-      {
-        name: "活动一",
-        time: timeJS.formatDate(new Date(), "MM.dd hh:mm~") + timeJS.formatDate(new Date(), "MM.dd hh:mm"),
-        location: "体育场C座"
-      },
-      {
-        name: "活动二",
-        time: timeJS.formatDate(new Date(), "MM.dd hh:mm~") + timeJS.formatDate(new Date(), "MM.dd hh:mm"),
-        location: "体育场C座"
-      },
-      {
-        name: "活动三",
-        time: timeJS.formatDate(new Date(), "MM.dd hh:mm~") + timeJS.formatDate(new Date(), "MM.dd hh:mm"),
-        location: "体育场C座"
-      },
-      {
-        name: "活动四",
-        time: timeJS.formatDate(new Date(), "MM.dd hh:mm~") + timeJS.formatDate(new Date(), "MM.dd hh:mm"),
-        location: "体育场C座"
-      }
-
-    ]
+    activityList: []
   },
 
   reFreshTheQQMap : function () {
@@ -71,6 +38,8 @@ Page({
   onLoad: function (options) {
     var geoPage = ReadJsonJS.ReadJsonToGeoPage();
     this.reFreshTheQQMap();
+    var that = this;
+    ActListViewJS.init(that);
     if (options && options.searchValue) {
       this.setData({
         searchValue: "搜索：" + options.searchValue

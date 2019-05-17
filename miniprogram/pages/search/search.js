@@ -28,6 +28,17 @@ const options = {
 
 Page({
   data: {
+    searchValue: '',
+    wxSearchData: {
+      configconfig: {
+        style: "wxSearchNormal"
+      },
+      view: {
+        hidden: true
+      },
+      hotKeys: [], //自定义热门搜索
+      his: [] //历史搜索关键字
+    },
   },
 
   onLoad: function(){
