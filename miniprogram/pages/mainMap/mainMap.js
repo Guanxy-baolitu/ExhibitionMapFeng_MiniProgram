@@ -1,4 +1,5 @@
 var ReadJsonJS = require("../../js/readFromJSON.js");
+var timeJS = require("../../js/util_time.js");
 const app = getApp();
 Page({
   data: {
@@ -14,7 +15,7 @@ Page({
       his: [] //历史搜索关键字
     },
     markers: [{
-      iconPath: '../../images/map-marker-alt.png',
+      iconPath: '../../images/DetailPage.png',
       latitude: 39.75861437,
       longitude: 116.3558386,
       width: 50,
@@ -25,39 +26,66 @@ Page({
     polygons: [],
     controls: [{
       id: 1,
-      iconPath: '../../images/地图 (1).png',
+      iconPath: '../../images/Floors1.png',
       position: {
-        left: 0,
-        top: 300 - 50,
+        left: 5,
+        top: 200 - 50,
         width: 50,
         height: 50
       },
       clickable: true
-    }]
+    }],
+    activityList: [
+      {
+        name: "活动一",
+        time: timeJS.formatDate(new Date(), "MM.dd hh:mm~") + timeJS.formatDate(new Date(), "MM.dd hh:mm"),
+        location: "体育场C座"
+      },
+      {
+        name: "活动二",
+        time: timeJS.formatDate(new Date(), "MM.dd hh:mm~") + timeJS.formatDate(new Date(), "MM.dd hh:mm"),
+        location: "体育场C座"
+      },
+      {
+        name: "活动三",
+        time: timeJS.formatDate(new Date(), "MM.dd hh:mm~") + timeJS.formatDate(new Date(), "MM.dd hh:mm"),
+        location: "体育场C座"
+      },
+      {
+        name: "活动四",
+        time: timeJS.formatDate(new Date(), "MM.dd hh:mm~") + timeJS.formatDate(new Date(), "MM.dd hh:mm"),
+        location: "体育场C座"
+      }
+
+    ]
   },
 
+  reFreshTheQQMap : function () {
+    this.setData({
+      circles: app.globalData.floors[app.globalData.currentFloor].KeyPoints,
+      polygons: app.globalData.floors[app.globalData.currentFloor].Polygons
+    });
+    console.log(this.data);
+  },
   // 搜索页面跳回
   onLoad: function (options) {
     var geoPage = ReadJsonJS.ReadJsonToGeoPage();
-    this.setData(
-      {
-        circles: app.globalData.floors[app.globalData.currentFloor].KeyPoints,
-        polygons: app.globalData.floors[app.globalData.currentFloor].Polygons
-      });
+    this.reFreshTheQQMap();
     if (options && options.searchValue) {
       this.setData({
         searchValue: "搜索：" + options.searchValue
       });
-    }
+    };
   },
-  // 搜索入口  
-  wxSearchTab: function () {
-    wx.navigateTo({
-      url: '../search/search'
-    })
-  },
-  regionchange(e) {
-    console.log(e.type)
+  controltap(e) {
+    var _this = this;
+    wx.showActionSheet({
+      itemList: Object.keys(app.globalData.floors),
+      success(res) {
+        app.globalData.currentFloor = Object.keys(app.globalData.floors)[res.tapIndex];
+        console.log(app.globalData.currentFloor);
+        _this.reFreshTheQQMap();
+      }})
   },
   markertap(e) {
     wx.navigateTo({
@@ -65,7 +93,10 @@ Page({
     })
     console.log(e.markerId)
   },
-  controltap(e) {
-    console.log(e.controlId)
+  // 搜索入口  
+  wxSearchTab: function () {
+    wx.navigateTo({
+      url: '../search/search'
+    })
   }
 })

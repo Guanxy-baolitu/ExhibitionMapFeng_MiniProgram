@@ -1,5 +1,5 @@
 //index.js
-var WxSearch = require('../../wxSearchView/wxSearchView.js');
+var WxSearch = require('../../views/wxSearchView/wxSearchView.js');
 const recorderManager = wx.getRecorderManager()
 
 recorderManager.onStart(() => {

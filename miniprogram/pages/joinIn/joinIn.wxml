@@ -1,6 +1,0 @@
-<!--index.wxml-->
-<view class="container">
-  <input placeholder="no" focus='false'bindtap="wxSearchTab" confirm-type="search" />
-  <button class="registerBtn"> 进入
-  </button>
-</view>

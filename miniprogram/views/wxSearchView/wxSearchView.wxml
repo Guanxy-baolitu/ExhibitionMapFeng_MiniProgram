@@ -11,7 +11,6 @@
 </view>
 
 <view class="wxSearch" style="'block'">
-
   <view class="wxSearchInner">
     <!-- 搜索提示部分 -->
     <view class="wxSearchMindKey">

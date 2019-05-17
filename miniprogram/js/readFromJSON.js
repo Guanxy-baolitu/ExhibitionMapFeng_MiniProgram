@@ -5,7 +5,7 @@ var strFloor = "floor";
 var strColor = "color";
 
 function ReadJsonToGeoPage() {
-  var strJSON = "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[116.35634064674377,39.76008563383252]},\"properties\":{\"floor\":\"1\",\"color\":\"#000\"}},{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[116.35659277439117,39.7594835585747]},\"properties\":{\"floor\":\"1\",\"color\":\"#000\"}},{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[116.35753154754639,39.76001140566055]},\"properties\":{\"floor\":\"1\",\"color\":\"#000\"}},{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[116.3579660654068,39.759611396912085]},\"properties\":{\"floor\":\"1\",\"color\":\"#000\"}},{\"type\":\"Feature\",\"geometry\":{\"type\":\"Polygon\",\"coordinates\":[[116.35569155216217,39.76013099545379],[116.35537505149841,39.75943819652697],[116.35567545890808,39.758951583590154],[116.35631382465363,39.75941345357927]]},\"properties\":{\"floor\":\"1\",\"color\":\"#000\"}},{\"type\":\"Feature\",\"geometry\":{\"type\":\"Polygon\",\"coordinates\":[[116.35759055614471,39.759574282580516],[116.35830402374268,39.759574282580516],[116.35830402374268,39.75886910648042],[116.35759055614471,39.75886910648042]]},\"properties\":{\"floor\":\"1\",\"color\":\"#000\"}}]}";//TODO: request
+  var strJSON = "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"geometry\":{\"type\":\"Polygon\",\"coordinates\":[[116.35587930679321,39.758867085704416],[116.35714530944824,39.758867085704416],[116.35714530944824,39.758339229847714],[116.35587930679321,39.758339229847714]]},\"properties\":{\"floor\":\"1\",\"color\":\"#000\"}},{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[116.35562181472778,39.75889182884844]},\"properties\":{\"floor\":\"2\",\"color\":\"#000\"}},{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[116.35664105415344,39.75847944195424]},\"properties\":{\"floor\":\"2\",\"color\":\"#000\"}},{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[116.35705947875977,39.758867085704416]},\"properties\":{\"floor\":\"2\",\"color\":\"#000\"}},{\"type\":\"Feature\",\"geometry\":{\"type\":\"Point\",\"coordinates\":[116.35757446289062,39.75858666278429]},\"properties\":{\"floor\":\"2\",\"color\":\"#000\"}},{\"type\":\"Feature\",\"geometry\":{\"type\":\"Polygon\",\"coordinates\":[[116.35540723800659,39.758405212051066],[116.35649085044861,39.75888358113475],[116.35732769966125,39.75847119419119],[116.35616898536682,39.75820726525139]]},\"properties\":{\"floor\":\"3\",\"color\":\"#000\"}}]}";//TODO: request
   // wx.request({
   //   url: 'http://tp5.me/api/v1/banner/' + id,
   //   method: 'GET',
@@ -18,7 +18,7 @@ function ReadJsonToGeoPage() {
     var geoStorageObj = JSON.parse(strJSON); 
     if (geoStorageObj !== null)
       geoStorageObj.features.forEach(function (feature) {
-        var currentFloor = feature.properties[strFloor];
+        var currentFloor = feature.properties[strFloor].toString();
         var currentColor = feature.properties[strColor];
         if (app.globalData.floors[currentFloor] == undefined)
           app.globalData.floors[currentFloor] = new Floor();

@@ -1,5 +1,5 @@
 /**index.wxss**/
-@import "../../wxSearchView/wxSearchView.wxss";
+@import "../../views/wxSearchView/wxSearchView.wxss";
 .button-container
 {
   margin-top: 36rpx;

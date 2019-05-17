@@ -1,9 +1,0 @@
-/**index.wxss**/
-.registerBtn
-{
-  background-color: #009688;
-  color: white;
-  position: fixed;
-  width: 96vw;
-  bottom: 16rpx; 
-}

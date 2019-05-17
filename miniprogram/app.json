@@ -1,10 +1,9 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/mainMap/mainMap",
-    "pages/joinIn/joinIn",
     "pages/search/search",
-    "pages/D3web-view/d3web-view",
-    "pages/mainActivities/mainActivities"
+    "pages/D3web-view/d3web-view"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -16,20 +15,21 @@
   "tabBar": {
     "list": [
       {
+        "text": "首页",
+        "iconPath": "images/活动.png",
+        "selectedIconPath": "images/活动 (1).png",
+        "pagePath": "pages/index/index"
+      },
+      {
         "text": "地图",
         "iconPath": "images/地图.png",
         "selectedIconPath": "images/地图 (1).png",
         "pagePath": "pages/mainMap/mainMap"
-      },
-      {
-        "text": "活动列表",
-        "iconPath": "images/活动.png",
-        "selectedIconPath": "images/活动 (1).png",
-        "pagePath": "pages/mainActivities/mainActivities"
       }
     ],
     "backgroundColor": "#FFFFFF",
     "color": "#707070",
     "selectedColor": "#009688"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
