@@ -38,10 +38,6 @@
   border-radius: 4rpx;
 }
 
-
-
-
-
 .weui-icon-clear-history {
   position: absolute;
   top: 108rpx;

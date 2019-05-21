@@ -30,7 +30,6 @@ function init(that)
     activityList: []
   })
   requestActivityList();
-  console.log(that.data);
 }
 
 function requestActivityList()

@@ -2,7 +2,7 @@
 {
   top: 60vh;
 }
-scroll-view
+.activity-scroll-view
 {
   height: 35vh;
 }

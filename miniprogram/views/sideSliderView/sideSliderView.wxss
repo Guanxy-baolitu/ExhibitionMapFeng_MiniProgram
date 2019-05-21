@@ -18,17 +18,24 @@
     background-color:white;
     z-index: 0;
 }
- 
-/* 控制侧边栏的内容距离顶部的距离 */
-.page-content {
-    padding-top: 60rpx;
+.side-scroll-view
+{
+  height: 100vh;
+  padding-top: 10rpx;
+}
+
+.wxSearchKeyItem-select{
+  margin: 16rpx;
+  padding: 12rpx 28rpx 12rpx 28rpx;
+  border-radius: 4rpx;
+  color: #fff;
+  background: #009688;
 }
  
 /* 侧边栏内容的 css 样式 */
-.wc {
+.categoryList {
     color:black;
-    padding: 30rpx 90rpx 30rpx 550rpx;
-    border-bottom: 1px solid #eee; 
+    padding: 20rpx 20rpx 30rpx 330rpx;
 }
  
 /* 当屏幕向左滑动，出现侧边栏的时候，主页的动画样式 */
@@ -49,3 +56,4 @@
     transition: All 0.4s ease;
     -webkit-transition: All 0.4s ease;
 }
+@import "../wxSearchView/wxSearchView.wxss";

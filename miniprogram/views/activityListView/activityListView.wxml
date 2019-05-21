@@ -1,6 +1,6 @@
 <view class="list-container">
     <scroll-view scroll-y 
-    scroll-into-view="{{toView}}" >
+    scroll-into-view="{{toView}}" class ="activity-scroll-view">
       <view class="list-item" wx:for="{{activityList}}" wx:key="unique">
         <view class="list-item-detail">
           <text class='list-item-detail-title'>{{item.name}}</text>

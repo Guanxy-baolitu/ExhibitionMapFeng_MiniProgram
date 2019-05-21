@@ -16,7 +16,7 @@ function init(that) {
     polygons: [],
     controls: [{
       id: 0,
-      iconPath: '../../images/Floors1.png',
+      iconPath: '../../images/Floors.png',
       position: {
         left: 5,
         top: 200 - 50,
@@ -40,11 +40,13 @@ function init(that) {
 }
 function reFreshTheQQMap () {
   _that.setData({
+    // markers : app.globalData.floors[app.globalData.currentFloor].Markers,
     circles: app.globalData.floors[app.globalData.currentFloor].KeyPoints,
     polygons: app.globalData.floors[app.globalData.currentFloor].Polygons
   });
 }
 function markertap(e) {
+  console.log(e);
   wx.navigateTo({
     url: '../D3web-view/d3web-view',
   })
@@ -58,7 +60,6 @@ function controltap(e) {
         itemList: Object.keys(app.globalData.floors),
         success(res) {
           app.globalData.currentFloor = Object.keys(app.globalData.floors)[res.tapIndex];
-          console.log(app.globalData.currentFloor);
           _this.reFreshTheQQMap();
         }
       })

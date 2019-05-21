@@ -3,6 +3,7 @@ class Floor{
     this.KeyPoints = [];
     this.Polygons = [];
     this.Lines = [];
+    this.Markers = [];
   }  
 }
 export { Floor }

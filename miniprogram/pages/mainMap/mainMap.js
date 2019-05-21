@@ -4,20 +4,16 @@ var ActListViewJS = require("../../views/activityListView/activityListView.js")
 var SideViewJS = require("../../views/sideSliderView/sideSliderView.js")
 const app = getApp();
 Page({
-  data: {searchPage : 'false'},
+  data: {searchPage : false},
   // 搜索页面跳回
   onLoad: function (options) {
     var that = this;
-    ReadJsonJS.ReadJsonToGeoPage();
     QQMapViewJS.init(that);
+    ReadJsonJS.ReadJsonToGeoPage();
     QQMapViewJS.reFreshTheQQMap();
     ActListViewJS.init(that);
     SideViewJS.init(that);
-    if (options && options.searchValue) {
-      this.setData({
-        searchValue: "搜索：" + options.searchValue
-      });
-    };
+    
   },
   // 搜索入口  
   wxSearchTab: function () {
@@ -25,6 +21,7 @@ Page({
       url: '../search/search'
     })
   },
+  tapCat(event) { SideViewJS.selectFromCat(event);},
   black_cover_tap(){SideViewJS.close();},
   reFreshTheQQMap: function () {QQMapViewJS.reFreshTheQQMap();},
   controltap(e) { QQMapViewJS.controltap(e);},

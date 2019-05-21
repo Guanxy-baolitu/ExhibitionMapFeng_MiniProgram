@@ -1,16 +1,10 @@
 <view class="page-slidebar">
-    <view class="page-content">
-        <view class="wc">
-            <text>首页</text>
+    <scroll-view scroll-y class="side-scroll-view">
+      <view class="categoryList" wx:for="{{categoryList}}" wx:for-index="key" wx:key="unique">
+          <text class='wxSearchTitle'>{{key}}</text>
+        <view class="wxSearchKeyList">
+          <text class="{{item.selected?'wxSearchKeyItem-select':'wxSearchKeyItem'}}" data-key="{{key}}" data-value="{{item.value}}"  wx:for="{{item}}" bindtap="tapCat" wx:key="unique">{{item.value}}</text>
         </view>
-        <view class="wc">
-            <text>导航一</text>
-        </view>
-        <view class="wc">
-            <text>导航二</text>
-        </view>
-        <view class="wc">
-            <text>导航三</text>
-        </view>
-    </view>
+      </view>
+    </scroll-view>
 </view>
