@@ -4,7 +4,7 @@ var ActListViewJS = require("../../views/activityListView/activityListView.js")
 var SideViewJS = require("../../views/sideSliderView/sideSliderView.js")
 const app = getApp();
 Page({
-  data: {},
+  data: {searchPage : 'false'},
   // 搜索页面跳回
   onLoad: function (options) {
     var that = this;

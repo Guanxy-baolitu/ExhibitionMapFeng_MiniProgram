@@ -28,6 +28,7 @@ const options = {
 
 Page({
   data: {
+    searchPage: 'true',
     searchValue: '',
     wxSearchData: {
       configconfig: {
