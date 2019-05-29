@@ -4,13 +4,7 @@ var _that = null;
 function init(that) {
   _that = that;
   _that.setData({
-    markers: [{
-      iconPath: '../../images/DetailPage.png',
-      latitude: 39.75861437,
-      longitude: 116.3558386,
-      width: 50,
-      height: 50
-    }],
+    markers: [],
     circles: [],
     polyline: [],
     polygons: [],
@@ -40,9 +34,10 @@ function init(that) {
 }
 function reFreshTheQQMap () {
   _that.setData({
-    // markers : app.globalData.floors[app.globalData.currentFloor].Markers,
+    markers : app.globalData.floors[app.globalData.currentFloor].Markers,
     circles: app.globalData.floors[app.globalData.currentFloor].KeyPoints,
-    polygons: app.globalData.floors[app.globalData.currentFloor].Polygons
+    polygons: app.globalData.floors[app.globalData.currentFloor].Polygons,
+    mapOn: true
   });
 }
 function markertap(e) {
