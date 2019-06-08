@@ -1,0 +1,2 @@
+@import "../../views/searchBarView/searchBarView.wxss";
+@import "../../views/activityListView/activityListView.wxss";

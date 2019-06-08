@@ -2,6 +2,7 @@ const app = getApp()
 
 Page({
   data: {
+    // TODO: 详情页
     url: 'https://air.nullschool.net/'
   },
   onLoad: function (options) {

@@ -1,8 +1,8 @@
 class Floor{
   constructor(){
-    this.KeyPoints = [];
+    this.Circles = [];
     this.Polygons = [];
-    this.Lines = [];
+    this.Polylines = [];
     this.Markers = [];
   }  
 }

@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/mainMap/mainMap",
+    "pages/mainActList/mainActList",
     "pages/search/search",
     "pages/D3web-view/d3web-view"
   ],
@@ -16,8 +17,8 @@
     "list": [
       {
         "text": "首页",
-        "iconPath": "images/活动.png",
-        "selectedIconPath": "images/活动 (1).png",
+        "iconPath": "images/首页.png",
+        "selectedIconPath": "images/首页 (1).png",
         "pagePath": "pages/index/index"
       },
       {
@@ -25,6 +26,12 @@
         "iconPath": "images/地图.png",
         "selectedIconPath": "images/地图 (1).png",
         "pagePath": "pages/mainMap/mainMap"
+      },
+      {
+        "text": "活动列表",
+        "iconPath": "images/活动.png",
+        "selectedIconPath": "images/活动 (1).png",
+        "pagePath": "pages/mainActList/mainActList"
       }
     ],
     "backgroundColor": "#FFFFFF",

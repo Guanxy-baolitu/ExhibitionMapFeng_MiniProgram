@@ -1,5 +1,8 @@
 var _that = null;
 var categories = {};
+let app = getApp();
+var strFloor = "楼层";
+var strRoute = "导览路线";
 function init(that)
 {
   _that = that;
@@ -15,20 +18,14 @@ function init(that)
 }
 
 function requestCategories(){
-  categories['地点']=[];
-  categories['地点'].push({value:'3号楼', selected :false});
-  categories['地点'].push({ value: '百讲', selected: false });
-  categories['地点'].push({ value: '体育馆', selected: false });
-  categories['地点'].push({ value: '操场', selected: false });
-  categories['地点'].push({ value: '二教', selected: false });
-  categories['地点'].push({ value: '新太阳', selected: false });
-  categories['时间'] = [];
-  categories['时间'].push({ value: '05.16', selected: false });
-  categories['时间'].push({ value: '05.17', selected: false });
-  categories['内容'] = [];
-  categories['内容'].push({ value: '有表演', selected: false });
-  categories['内容'].push({ value: '无表演', selected: false });
-  // wx.request
+  categories[strFloor]=[];
+  Object.keys(app.globalData.floors).forEach(function (idx)
+  {
+    categories[strFloor].push({ value: idx, selected: false });
+  });
+  categories[strFloor][0].selected=true;
+  categories[strRoute] = [];
+  categories[strRoute].push({ value: '路线', selected: true });
   _that.setData({categoryList: categories});
 }
 
@@ -46,15 +43,38 @@ function tap_ch() {
 function selectFromCat(event){
   var key = event.target.dataset.key;
   var value = event.target.dataset.value;
-  categories[key].forEach(function (item) {
-    if(item.value===value){
-      item.selected = (item.selected==true)?false:true;
+  if (key === strFloor)
+  {
+    var same = false;
+    categories[key].forEach(function (item) {
+      if (item.value === value && item.selected===true) same = true;
+      item.selected = false;
+    });
+    categories[key].forEach(function (item) {
+      if (item.value === value) {item.selected = true;}
+    });
+    if (same === true) return;
+    app.globalData.currentFloor = value;
+    _that.reFreshTheQQMap();
+  }
+  else if (key === strRoute) {
+    if (categories[key][0].selected == true)
+    {
+      categories[key][0].selected = false ;
+      _that.setData({
+        polyline: null,
+      })
+      app.globalData.showRoute = false;
     }
-    console.log(item);
-  });
+    else {
+      categories[key][0].selected = true;
+      _that.setData({
+        polyline: app.globalData.floors[app.globalData.currentFloor].Polylines,
+      })
+      app.globalData.showRoute = true;
+    }
+  }
   _that.setData({ categoryList: categories });
-  // console.log(key);
-  // console.log(value);
 }
 
 function close(){
@@ -66,6 +86,7 @@ function close(){
 module.exports = {
   init: init,
   tap_ch: tap_ch,
+  requestCategories: requestCategories,
   selectFromCat: selectFromCat,
   close: close
 }

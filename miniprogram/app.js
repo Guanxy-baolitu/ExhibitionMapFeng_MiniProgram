@@ -1,15 +1,16 @@
 //app.js
 App({
   globalData: {
-    currentFloor : 1,
-    floors : {},
-    userInfo: null,
-    sysInfo: null,
-    windowW: null,
-    windowH: null
+    currentFloor: 1,
+    floors: {},
+    pageNames: {},
+    showRoute: true,
+    markerValue: {}
   },
-  onLaunch: function () {
+  onLaunch: function() {
     this.globalData = {}
     this.globalData.floors = {};
+    this.globalData.markerValue = {};
+    this.globalData.showRoute = true;
   }
 })
