@@ -15,7 +15,7 @@ var strGrav = "gravPnt";
 var detailCallout = {
   content: "查看详情",
   fontSize: 14,
-  color: "FFFFFFFF",
+  color: "#FFFFFF",
   bgColor: "#009968",
   borderWidth: 1,
   padding: 4,
@@ -103,7 +103,12 @@ function ReadJsonToGeoPage() {
         // var addMarkerFunction = function (currentFloor, id, lat, lng, icon, callout)
         markerCallout.content = feature.properties[strActName];
         if (feature.properties[strPage] != undefined) { // 优先级：详情页高于所有
-          addMarkerFunction(currentFloor, feature.properties[strPage], feature.geometry.coordinates[1], feature.geometry.coordinates[0], '../../images/DotWithPage.png', copyobj(detailCallout));
+          if (feature.geometry.type == "Circle") {
+            addMarkerFunction(currentFloor, feature.properties[strPage], feature.geometry.coordinates[1], feature.geometry.coordinates[0], '../../images/DotWithPage.png', copyobj(detailCallout));
+          }
+          else {
+            addMarkerFunction(currentFloor, feature.properties[strPage], feature.properties[strGrav].lat, feature.properties[strGrav].lng, '../../images/DotWithPage.png', copyobj(detailCallout));
+          }
         } else if (feature.properties[strAct] != undefined && feature.geometry.type == "Circle") { //圆上的额外Marker表示活动
           addMarkerFunction(currentFloor, feature.properties[strAct], feature.geometry.coordinates[1], feature.geometry.coordinates[0], '../../images/DotOnly.png', copyobj(markerCallout));
         } else if (feature.properties[strAct] != undefined && feature.geometry.type == "Polygon") { //多边形上的额外Marker表示活动
